@@ -1,0 +1,317 @@
+.content {
+  width: 100%;
+  height: 100%;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+.Main {
+  width: 100%;
+  height: 90vh;
+}
+body {
+  background-color: rgba(250, 250, 250, 0.596);
+}
+
+.contentLeftComponent {
+  width: 33%;
+  margin-top: -7%;
+  height: 100%;
+  margin-left: 20%;
+}
+
+.screenshot {
+  height: 100%;
+}
+.innerSS {
+  height: 65%;
+  position: absolute;
+  margin-left: -21.8%;
+  margin-top: 6.5%;
+}
+
+.Form {
+  width: 22rem;
+  height: 35rem;
+
+  margin-top: -8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 60%;
+  margin-top: 5%;
+}
+
+.loginButton {
+  background-color: #0095f6;
+  opacity: 0.3;
+  color: white;
+  width: 17rem;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  height: 1.875rem;
+  margin-top: 5%;
+  border: none;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.loginForm:valid .loginButton {
+  transition: 0.2s;
+  opacity: 1;
+  pointer-events: all;
+}
+.loginButton2 {
+  background-color: #0095f6;
+  opacity: 1;
+  color: white;
+  width: 17rem;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  height: 1.875rem;
+  margin-top: 5%;
+  border: none;
+  border-radius: 4px;
+  pointer-events: all;
+}
+
+.FormUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 24rem;
+
+  background-color: white;
+  border: 1px solid rgba(153, 153, 153, 0.445);
+}
+
+.loginForm {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.emailDiv {
+  margin-top: 7%;
+  width: 17rem;
+  height: 2.25rem;
+}
+.passwordDiv {
+  margin-top: 3%;
+  width: 17rem;
+  height: 2.25rem;
+}
+
+.emailInput,
+.pswInput {
+  width: 16rem;
+  background-color: rgb(250, 250, 250);
+  height: 2.25rem;
+  padding-left: 14px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  outline: none;
+}
+.emailInput:focus {
+  outline: 1px solid rgba(117, 117, 117, 0.582);
+}
+.pswInput:focus {
+  outline: 1px solid rgba(117, 117, 117, 0.582);
+}
+.span2 {
+  transform: translateY(-10px) scale(0.8888) translateX(-5px);
+  font-size: 12px;
+  transition: 0.2s;
+}
+.span5 {
+  transform: translateY(-10px) scale(0.8888) translateX(-0px);
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.span {
+  pointer-events: none;
+  font-size: 12px;
+  height: 36px;
+  font-weight: 400;
+  margin-left: 8px;
+  transition: 0.2s;
+  line-height: 36px;
+  color: #8e8e8e;
+  position: absolute;
+}
+.span4 {
+  pointer-events: none;
+  font-size: 12px;
+  height: 36px;
+  font-weight: 400;
+  margin-left: 8px;
+  transition: 0.2s;
+  line-height: 36px;
+  color: #8e8e8e;
+  position: absolute;
+}
+.or {
+  width: 17rem;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: center;
+  margin-top: 5%;
+  text-align: center;
+}
+.or2 {
+  width: 10%;
+  color: #8e8e8e;
+  font-size: 13px;
+}
+.or1 {
+}
+.or1,
+.or3 {
+  height: 1px;
+  margin-right: 2.5%;
+  width: 45%;
+
+  margin-left: 2.5%;
+  background-color: #8e8e8e60;
+}
+
+.facebookLogin {
+  width: 17rem;
+  height: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.facebookIcon {
+  width: 1rem;
+
+  height: 1rem;
+}
+
+.facebookLogin a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #385185;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 3%;
+  line-height: 1rem;
+}
+a {
+  text-decoration: none;
+}
+.forgotPsw {
+  font-size: 12px;
+  font-weight: 400;
+  color: #385185;
+  line-height: 1rem;
+  margin-top: 3%;
+}
+
+.formBottom {
+  width: 100%;
+  height: 4rem;
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(153, 153, 153, 0.445);
+}
+
+.formBottom p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.formBottom p a {
+  font-weight: 600;
+  color: #0095f6;
+}
+
+.getApp {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.apps {
+  display: flex;
+  flex-direction: row;
+}
+.getApp p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.apps a {
+  width: 45%;
+  height: 2.5 rem;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.apps a img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lines {
+  width: 60%;
+  height: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.a {
+  color: #8e8e8e;
+}
+.line1,
+.line2,
+.line3 {
+  margin-top: 2%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+  font-size: 12px;
+
+  grid-row: auto;
+  text-align: center;
+  width: 100%;
+}
+.line2 {
+  width: 65%;
+}
