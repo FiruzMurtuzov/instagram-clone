@@ -1,0 +1,208 @@
+.register {
+  width: 100%;
+  height: 49.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerBox {
+  width: 21.75rem;
+  height: 33rem;
+  border: 1px solid rgba(139, 139, 139, 0.575);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.logo1 {
+  width: 50%;
+
+  margin-top: 1rem;
+}
+
+.formBottom2 {
+  width: 21.75rem;
+  background-color: white;
+  height: 4.375rem;
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(153, 153, 153, 0.445);
+}
+
+.formBottom2 p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.formBottom2 p a {
+  font-weight: 600;
+  color: #0095f6;
+}
+
+.getApp2 {
+  width: 21.115rem;
+  height: 6.375;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.apps2 {
+  display: flex;
+  flex-direction: row;
+}
+.getApp2 p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.apps2 a {
+  width: 45%;
+  height: 2.5 rem;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.apps2 a img {
+  width: 100%;
+  height: 100%;
+}
+
+.nameDiv {
+  margin-top: 3%;
+  width: 17rem;
+  height: 2.25rem;
+}
+.usernameDiv {
+  margin-top: 3%;
+  width: 17rem;
+  height: 2.25rem;
+}
+
+.nameInput,
+.usernameInput {
+  width: 16rem;
+  background-color: rgb(250, 250, 250);
+  height: 2.25rem;
+  padding-left: 14px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  outline: none;
+}
+.usernameInput:focus {
+  outline: 1px solid rgba(117, 117, 117, 0.582);
+}
+.nameinput:focus {
+  outline: 1px solid rgba(117, 117, 117, 0.582);
+}
+.span2 {
+  transform: translateY(-10px) scale(0.8888) translateX(-5px);
+  font-size: 12px;
+  transition: 0.2s;
+}
+.span5 {
+  transform: translateY(-10px) scale(0.8888) translateX(-0px);
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.span {
+  pointer-events: none;
+  font-size: 12px;
+  height: 36px;
+  font-weight: 400;
+  margin-left: 8px;
+  transition: 0.2s;
+  line-height: 36px;
+  color: #8e8e8e;
+  position: absolute;
+}
+.span4 {
+  pointer-events: none;
+  font-size: 12px;
+  height: 36px;
+  font-weight: 400;
+  margin-left: 8px;
+  transition: 0.2s;
+  line-height: 36px;
+  color: #8e8e8e;
+  position: absolute;
+}
+
+.bannerTopper {
+  color: #8e8e8e;
+  font-size: 17px;
+  font-weight: 600;
+
+  max-width: 16.75rem;
+  text-align: center;
+}
+
+.meta {
+  width: 16.75rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #0095f6;
+  color: white;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 14px;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.meta img {
+  height: 20px;
+
+  margin-right: 3%;
+}
+.loginButton2 {
+  opacity: 0.4;
+}
+.loginButton2 {
+  cursor: pointer;
+  pointer-events: none;
+  height: 2rem;
+}
+.registerBox:valid .loginButton2 {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.ppp {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8e8e8e;
+  max-width: 70%;
+  line-height: 16px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.ppp {
+  margin-top: 1rem;
+}

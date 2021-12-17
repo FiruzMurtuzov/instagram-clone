@@ -1,15 +1,24 @@
 import React from 'react'
 import logo from '../assets/ehg.png'
 import { useState } from 'react';
+import { useAuth } from '../context/auth';
+import { useRef } from 'react';
+import { Redirect, useHistory } from 'react-router';
+import Register from './register';
+import { Link } from 'react-router-dom';
+import useMounted from '../hooks/usemounted';
+export default function Content({Yeh,setYeh,Yeh2,setYeh2,Ah,setAh,B,setB,B2i,setB2i,page}) {
 
-export default function Content({Yeh,setYeh,Yeh2,setYeh2,Ah,setAh,B,setB,B2i,setB2i}) {
-  
-
+const {login} = useAuth()
+  const mounted = useMounted()
+  const {currentUser} = useAuth()
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     
- 
     const [Validin,setLol] = useState(false)
     const [Valid,setValid] = useState(false)
     const [ValidPsw,setPsw] = useState(false)
+    const history = useHistory()
 const toggle = (e)=>{ 
         setYeh(true)
 }
@@ -24,6 +33,7 @@ if(B==0){
 }
 function che(e){
     setB(e.target.value.length) 
+    setEmail(e.target.value)
 }
 
 
@@ -32,9 +42,11 @@ const toggle3 = ()=>{
 setYeh2(true)
 }
 function che2(e){
+    setPassword(e.target.value)
     setB2i(e.target.value.length) 
     
     }
+
 const toggle4 = (e)=>{
   
   if(B2i==0){
@@ -44,11 +56,48 @@ const toggle4 = (e)=>{
    }
 }
 
+if(currentUser){
+    if(page=='h'){
+        history.push('/')
+    }
+}
 
 const submit = (e)=>{
 
     e.preventDefault()
-    alert(e.target.value)
+  
+    console.log(email)
+   
+    console.log(password)
+    login(email,password)
+    .then(
+        function fd(response){
+            console.log(response)
+            alert('Successfully Loged in') 
+            
+         
+            history.push('/')
+         
+            
+        }
+       
+        )
+    .catch(
+        function funcc(error){
+            console.log(error.message)
+            if(error.message=="Firebase: Error (auth/email-already-in-use)."){
+               alert('This email is already used')
+              
+
+             
+            } if(error.message==="Firebase: Error (auth/wrong-password)."){
+                alert('Incorrect password.')
+                
+            }
+        }
+       
+    )
+    .finally(()=>{})
 }
 
 
@@ -56,22 +105,24 @@ const submit = (e)=>{
         
      
      <div className="content">
+   
             <div className="contentLeftComponent">
+               
                 <img src="https://www.instagram.com/static/images/homepage/home-phones@2x.png/9364675fb26a.png" className="screenshot"></img>
                 <img src="https://www.instagram.com/static/images/homepage/screenshot1-2x.jpg/9144d6673849.jpg" className="innerSS"></img>
             </div>
            <div className="Form">
-               <div class="FormUp">
+               <div className="FormUp">
                <img src={logo} className="logo"></img>
 
                <form className="loginForm">
                    <div className="emailDiv">
                        <label className="Email">
                            <span id="span" className={Yeh ? "span2 span" : "span"}>Phone number,username or email</span>
-                           <input id="inp" type='email'onFocus={toggle} onBlur={toggle2} onChange={che}  minLength='1'maxLength='80' className="emailInput" aria-label="Phone number,username or email" aria-required="true" required></input>
+                           <input id="inp" type='email'onFocus={toggle} placeholder="Phone number,username or email" onBlur={toggle2} onChange={che}  minLength='1'maxLength='80' className="emailInput" aria-label="Phone number,username or email" aria-required="true" required></input>
 
                        </label>
-                       <div class="banner"></div>
+                       <div className="banner"></div>
                    </div>
                    <div className="passwordDiv">
                        <label className="password">
@@ -79,7 +130,7 @@ const submit = (e)=>{
                            <input id="inp2" minLength="7" type='password'onFocus={toggle3} onBlur={toggle4} onChange={che2}  minLength='8'maxLength='80' className="pswInput" aria-label="Password" aria-required="true" required></input>
 
                        </label>
-                       <div class="banner"></div>
+                       <div className="banner"></div>
                    </div>
                    <button type="submit" onClick={submit} className="loginButton" >Log in</button>
 
@@ -91,15 +142,15 @@ const submit = (e)=>{
 
                    <div className="facebookLogin">
                        <img src="https://cdn.pixabay.com/photo/2015/05/17/10/51/facebook-770688_1280.png" className="facebookIcon"></img>
-                       <a href="">Log in with Facebook</a>
+                       <div  className="ohg" /* onClick={loginfacea} */>Log in with Facebook</div>
                    </div>
 
-                   <a href="" className="forgotPsw">Forgot Password ?</a>
+                   <Link to='/passwordreset' className="forgotPsw">Forgot Password ?</Link>
                </form>
                </div>
 
-               <div class="formBottom">
-                   <p>Dont have an account? <a href="">Sign Up</a></p>
+               <div className="formBottom">
+                   <p>Dont have an account? <Link to='/register'>Sign Up</Link></p>
                </div>
 
                <div className='getApp'>
@@ -113,5 +164,6 @@ const submit = (e)=>{
 
         </div>
     )
+    
 }
 

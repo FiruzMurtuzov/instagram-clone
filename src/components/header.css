@@ -1,0 +1,155 @@
+.innerHeader {
+  width: 60.938rem;
+  height: 3.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: row;
+}
+.nav {
+  flex: 2;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  height: 1.5rem;
+  width: 1.5rem;
+  object-fit: contain;
+
+  color: rgb(24, 24, 24);
+}
+.nav div {
+  height: 1.5rem;
+  margin-left: 1rem;
+  width: 2rem;
+}
+.searchBar {
+  transition: all 1s;
+  width: 13.432rem;
+  height: 1.6rem;
+  border-radius: 3px;
+  background-color: rgb(250, 250, 250);
+  flex: 1;
+  border: 1px solid rgba(114, 114, 114, 0.637);
+  display: flex;
+  flex-direction: row;
+}
+.searchBox {
+  border: none;
+  background: none;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.4s;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  color: black;
+  outline: none;
+}
+::placeholder {
+  font-weight: 300;
+}
+.banner2 {
+  width: 22px;
+  height: 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  opacity: 0;
+  cursor: pointer;
+  animation: comea 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes comea {
+  from {
+    transform: translateY(-3px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+}
+.hideban {
+  pointer-events: none;
+  opacity: 0;
+}
+.close {
+  width: 22px;
+  height: 22px;
+  filter: grayscale(1);
+}
+.banner {
+  width: 20px;
+  height: 1.5rem;
+}
+
+.searchBox:focus {
+  text-align: left;
+}
+.logopart {
+  flex: 2;
+}
+.headerLogo {
+  width: 6.438rem;
+}
+.header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  z-index: 100;
+  justify-content: center;
+  border-bottom: 1px solid rgba(116, 116, 116, 0.603);
+}
+
+.profilePhoto {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+}
+.profilePhotoinner {
+  width: 15px;
+  cursor: pointer;
+
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .navItem {
+    display: none;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .nav {
+    min-width: 10rem;
+    justify-content: flex-start;
+  }
+  .searchBar {
+    flex: none;
+
+    margin-left: 5rem;
+  }
+  .logopart {
+    display: none;
+  }
+  .special {
+    margin-left: 0;
+    display: block;
+  }
+  .profilePhoto {
+    transform: translateX(-1rem);
+  }
+}

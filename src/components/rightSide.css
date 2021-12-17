@@ -1,0 +1,90 @@
+.rightSide {
+  width: 33rem;
+
+  background-color: rgb(252, 252, 252);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  height: 60rem;
+  margin-top: -3rem;
+  margin-left: 55rem;
+}
+
+.profileArea {
+  margin-top: 6rem;
+  display: flex;
+  margin-left: 2rem;
+  width: 50%;
+  height: 5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.list1 {
+  display: flex;
+  max-height: 80px;
+
+  margin-left: -2rem;
+  flex-direction: column;
+}
+.oneSuggest {
+  margin-top: 5px;
+  display: flex;
+  margin-left: 2rem;
+  width: 50%;
+  height: 2.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.suggest {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 2rem;
+
+  color: rgb(142, 142, 142);
+}
+.list1p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: -12px;
+  color: rgb(104, 104, 104);
+}
+.switch {
+  font-size: 12px;
+  color: #0095f6;
+  font-weight: 600;
+}
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+.profile {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: black;
+}
+.sugProfile {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: black;
+}
+.ad {
+  font-size: 11px;
+  margin-top: -11px;
+}
+
+.das {
+  margin-left: 0 rem;
+}
+
+@media screen and (max-width: 600px) {
+  .rightSide {
+    display: none;
+  }
+}

@@ -1,0 +1,83 @@
+.dropDownMenu {
+  width: 13rem;
+  height: 13rem;
+  position: sticky;
+  position: absolute;
+  border-radius: 5px;
+  margin-top: 4rem;
+  margin-left: 48rem;
+  margin-top: 0.1rem;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  animation: lololo 0.4s;
+  position: fixed;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: center;
+  z-index: 102;
+  box-sizing: content-box;
+}
+@keyframes lololo {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.yeah {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 7rem;
+  border-top: 1px solid rgba(139, 139, 139, 0.356);
+  border-left: 1px solid rgba(133, 133, 133, 0.342);
+  transform: rotate(45deg);
+  z-index: -1;
+  position: absolute;
+  margin-top: -0.55rem;
+  background-color: rgb(255, 255, 255);
+}
+.dropDownItem {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-radius: 5px;
+
+  height: 2.6rem;
+  transition: 0.1s;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropDownItem:hover {
+  background-color: rgba(240, 240, 240, 0.582);
+}
+.dropDownItem p {
+  font-size: 14px;
+  margin-left: 0.7rem;
+  color: #262626;
+  font-weight: 400;
+}
+.log {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 1px solid rgba(143, 141, 141, 0.541);
+}
+.icona {
+  width: 20px;
+  margin-left: 8px;
+  height: 20px;
+}
+.icona2 {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 600px) {
+  .dropDownMenu {
+    margin-left: 15rem;
+  }
+}
